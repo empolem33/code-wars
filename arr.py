@@ -5,3 +5,4 @@ def summation(num):
         result += i
     return result
         
+print(summation(4))
