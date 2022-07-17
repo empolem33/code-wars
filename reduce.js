@@ -9,3 +9,21 @@
 // (1, 1) --> 1 (1 since both are same)
 // (-1, 0) --> -1 (-1 + 0 = -1)
 // (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+
+function getSum( a,b )
+{
+  if (a <b ) {
+    return 1;
+  }
+   //Good luck!
+  let list = [];
+for (let i = b; i <= a; i++) {
+    list.push(i);
+}
+  const initialValue = 0;
+const sumWithInitial = list.reduce(
+  (a, b) => a + b,
+  initialValue
+)
+return sumWithInitial
+}
