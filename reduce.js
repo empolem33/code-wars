@@ -10,20 +10,25 @@
 // (-1, 0) --> -1 (-1 + 0 = -1)
 // (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 
+
 function getSum( a,b )
 {
-  if (a <b ) {
-    return 1;
-  }
-   //Good luck!
-  let list = [];
-for (let i = b; i <= a; i++) {
+ let x=[a,b]
+ x.sort(function(a, b) {
+  return a - b;
+})
+a= x[0]
+b= x[1]
+var list = [];
+for (var i = a; i <= b; i++) {
     list.push(i);
 }
-  const initialValue = 0;
+
 const sumWithInitial = list.reduce(
   (a, b) => a + b,
-  initialValue
+ 0
 )
 return sumWithInitial
+return total
 }
+getSum(1,15)
