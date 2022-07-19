@@ -9,9 +9,10 @@
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 
 function stray(numbers) {
+    //create empty obj
     let nums = {}
    
-    
+    // loop nums and add to obj 
   for(const el of numbers){
     if(el in nums){
     nums[el]+=1
@@ -20,6 +21,7 @@ function stray(numbers) {
   }
     
     }
+    //sort dictionary to find outlier
   return Number(Object.keys(nums).reduce((a, b) => nums[a] < nums[b] ? a : b))
   }
   
