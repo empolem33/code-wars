@@ -7,3 +7,21 @@
 // Examples
 // [1, 1, 2] ==> 2
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
+
+function stray(numbers) {
+    let nums = {}
+   
+    
+  for(const el of numbers){
+    if(el in nums){
+    nums[el]+=1
+  }else{
+    nums[el]=1
+  }
+    
+    }
+  return Number(Object.keys(nums).reduce((a, b) => nums[a] < nums[b] ? a : b))
+  }
+  
+  
+  stray([1, 1, 2])
