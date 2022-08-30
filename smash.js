@@ -2,3 +2,11 @@
 
 // result
 // ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+
+function smash (words) {
+    let word = words.join(" ")
+     return word
+  };
+  
+  
+  
